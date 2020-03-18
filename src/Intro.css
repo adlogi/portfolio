@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,900&display=swap');
+
 
 * {
   margin: 0;
@@ -16,11 +17,19 @@ body {
   height: 100vh;
 }
 
-.myName {
+.long-name {
   font-size: 3rem;
   padding: 0.5rem;
-  font-weight: bolder;
+  font-weight: 600;
   letter-spacing: 0.1rem;
+}
+
+.short-name {
+  font-size: 3rem;
+  padding: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  white-space: nowrap;
 }
 
 .colored {
@@ -40,7 +49,7 @@ div p {
 }
 
 .tech .typed-text {
-  font-weight: bold;
+  font-weight: 600;
   color: #dd7732;
 }
 
@@ -67,21 +76,46 @@ span.cursor.typing {
 
 .circle {
   visibility: hidden;
-  float: right;
   background-color: #dd7732;
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  transform: translate(-9.55rem,-1.75rem);
+  transform: translate(-10rem,-1.75rem);
   position: absolute;
   bottom: 0;
   z-index: 99;
 }
 
 @keyframes animate {
-  from {}
-  to { width: 2000px; height: 2000px; transform: translate(-1000px,1000px);}
+  100% {
+    width: 200vmax;
+    height: 200vmax;
+    transform: translate(-100vmax, 100vmax);
+  }
 }
+
+.fade-out {
+	-webkit-animation: fade-out 1s ease-out both;
+	        animation: fade-out 1s ease-out both;
+}
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 
 .btn {
   color: #ccc;

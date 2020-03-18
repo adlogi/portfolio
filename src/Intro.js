@@ -11,12 +11,12 @@ export default class Intro extends Component {
 
   render() {
     return (
-      <div className="container-fluid">
+      <div id='intro' className="container-fluid">
         <div className="row h-100">
           <div className="col-12 align-self-center">
             <div className="row">
               <div className="col-12 text-center">
-                <h1 className="myName">
+                <h1 className="long-name">
                   <span className="typed-text"></span><span className="circle"></span><span className="cursor">&nbsp;</span>
                 </h1>
               </div>
@@ -131,11 +131,12 @@ export default class Intro extends Component {
     delay += lines[2].reduce((memo, curr) => memo + curr.length, 0) * (typingDelay + erasingDelay) + (lines[2].length + 2) * (newTextDelay);
     this.timers.push(setTimeout(() => {
       exitCircle.style.visibility = 'visible';
-      exitCircle.style.animation = 'animate 2s ease-in forwards';
+      exitCircle.style.animation = 'animate 1s ease-in forwards';
+      document.querySelector('#intro').classList.add('fade-out');
     }, delay));
 
     // Show HomePage
-    delay += 3000;
+    delay += 1000;
     this.timers.push(setTimeout(this.props.showHome, delay));
   }
 
