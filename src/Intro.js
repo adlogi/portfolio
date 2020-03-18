@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './Intro.css';
 
-// Inspired by: https://codepen.io/Coding_Journey/pen/BEMgbX
 export default class Intro extends Component {
   render() {
     return (
@@ -11,7 +10,7 @@ export default class Intro extends Component {
             <div className="row">
               <div className="col-12 text-center">
                 <h1 className="myName">
-                  <span className="typed-text"></span><span class="circle"></span><span className="cursor">&nbsp;</span>
+                  <span className="typed-text"></span><span className="circle"></span><span className="cursor">&nbsp;</span>
                 </h1>
               </div>
             </div>
@@ -47,8 +46,8 @@ export default class Intro extends Component {
     const exitCircle = document.querySelector('.circle');
 
     const initialDelay = 2000;
-    const typingDelay = 200;
-    const erasingDelay = 100;
+    const typingDelay = 150;
+    const erasingDelay = 75;
     const newTextDelay = 1000; // Delay between current and next text
 
     function type(charIndex, text, typedElement, cursorSpan, remainingText = []) {
@@ -81,16 +80,15 @@ export default class Intro extends Component {
 
     function erase(charIndex, text, typedElement, cursorSpan, remainingText = []) {
       if (charIndex > 0) {
-        if(!cursorSpan.classList.contains('typing')) {
+        if (!cursorSpan.classList.contains('typing')) {
           cursorSpan.classList.add('typing');
         }
         typedElement.textContent = text.substring(0, charIndex-1);
         setTimeout(erase, erasingDelay, charIndex - 1, text, typedElement, cursorSpan, remainingText);
-      } 
-      else {
+      } else {
         cursorSpan.classList.remove("typing");
-        if(remainingText.length > 0) {
-          setTimeout(type, typingDelay + 1100, 0, remainingText[0], typedElement, cursorSpan, remainingText.slice(1));
+        if (remainingText.length > 0) {
+          setTimeout(type, newTextDelay, 0, remainingText[0], typedElement, cursorSpan, remainingText.slice(1));
         }
       }
     }
@@ -98,18 +96,16 @@ export default class Intro extends Component {
     cursorSpans[0].style.visibility = 'visible';
     let delay = initialDelay;
     setTimeout(type, delay, 0, lines[0][0], typedTexts[0], cursorSpans[0]);
-    delay += typingDelay * lines[0][0].length;
+    delay += typingDelay * lines[0][0].length + newTextDelay;
     setTimeout(type, delay, 0, lines[1][0], typedTexts[1], cursorSpans[1]);
-    delay += typingDelay * lines[1][0].length;
+    delay += typingDelay * lines[1][0].length + newTextDelay;
     setTimeout(type, delay, 0, lines[2][0], typedTexts[2], cursorSpans[2], lines[2].slice(1));
-    // console.log(lines[2].reduce((memo, curr) => memo + curr.length, 0))
-    // TODO: calculate exact time
-    delay += newTextDelay * 3.5 * lines[2].length;
+    delay += lines[2].reduce((memo, curr) => memo + curr.length, 0) * (typingDelay + erasingDelay) + (lines[2].length + 2) * (newTextDelay);
     setTimeout(() => {
       exitCircle.style.visibility = 'visible';
-      exitCircle.style.animation = 'animate 2s forwards';
+      exitCircle.style.animation = 'animate 2s ease-in forwards';
     }, delay);
-
-    
+    delay += 1000;
+    setTimeout(this.props.showHome, delay);
   }
 }

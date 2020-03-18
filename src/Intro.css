@@ -68,7 +68,7 @@ span.cursor.typing {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  transform: translate(-0.55rem,-1.75rem);
+  transform: translate(-9.55rem,-1.75rem);
   position: absolute;
   bottom: 0;
   z-index: 99;
