@@ -93,19 +93,35 @@ export default class Intro extends Component {
       }
     }
 
+    // Show cursor on the first line
     cursorSpans[0].style.visibility = 'visible';
+    // Type the first line
     let delay = initialDelay;
     setTimeout(type, delay, 0, lines[0][0], typedTexts[0], cursorSpans[0]);
-    delay += typingDelay * lines[0][0].length + newTextDelay;
+
+    // Show cursor on the second line
+    delay += typingDelay * lines[0][0].length;
+    setTimeout(() => {cursorSpans[1].style.visibility = 'visible'}, delay);
+    // Type the second time
+    delay += newTextDelay;
     setTimeout(type, delay, 0, lines[1][0], typedTexts[1], cursorSpans[1]);
-    delay += typingDelay * lines[1][0].length + newTextDelay;
+
+    // Show cursor on the third line
+    delay += typingDelay * lines[1][0].length;
+    setTimeout(() => {cursorSpans[2].style.visibility = 'visible'}, delay);
+    // Type the third line
+    delay += newTextDelay;
     setTimeout(type, delay, 0, lines[2][0], typedTexts[2], cursorSpans[2], lines[2].slice(1));
+
+    // Start exit animation
     delay += lines[2].reduce((memo, curr) => memo + curr.length, 0) * (typingDelay + erasingDelay) + (lines[2].length + 2) * (newTextDelay);
     setTimeout(() => {
       exitCircle.style.visibility = 'visible';
       exitCircle.style.animation = 'animate 2s ease-in forwards';
     }, delay);
-    delay += 1000;
+
+    // Show HomePage
+    delay += 3000;
     setTimeout(this.props.showHome, delay);
   }
 }
