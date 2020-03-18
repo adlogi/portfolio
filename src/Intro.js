@@ -1,7 +1,14 @@
 import React, { Component } from 'react'
 import './Intro.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faForward } from '@fortawesome/free-solid-svg-icons';
 
 export default class Intro extends Component {
+  constructor(props) {
+    super(props);
+    this.timers = [];
+  }
+
   render() {
     return (
       <div className="container-fluid">
@@ -28,6 +35,13 @@ export default class Intro extends Component {
                 </p>
               </div>
             </div>
+            <div className="row">
+              <div className="col-12 fixed-bottom text-center">
+                <button className="btn" type="button" onClick={this.props.showHome}>
+                  <FontAwesomeIcon icon={faForward} /> Skip Intro
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -50,7 +64,7 @@ export default class Intro extends Component {
     const erasingDelay = 75;
     const newTextDelay = 1000; // Delay between current and next text
 
-    function type(charIndex, text, typedElement, cursorSpan, remainingText = []) {
+    const type = (charIndex, text, typedElement, cursorSpan, remainingText = []) => {
       cursorSpan.style.visibility = 'visible'
       if (charIndex < text.length) {
         if (!cursorSpan.classList.contains("typing")) {
@@ -67,28 +81,28 @@ export default class Intro extends Component {
             typedElement.innerHTML += text[charIndex];
             break;
         }
-        setTimeout(type, typingDelay, charIndex + 1, text, typedElement, cursorSpan, remainingText);
+        this.timers.push(setTimeout(type, typingDelay, charIndex + 1, text, typedElement, cursorSpan, remainingText));
       } else {
         if (remainingText.length > 0) {
           cursorSpan.classList.remove("typing");
-          setTimeout(erase, newTextDelay, charIndex, text, typedElement, cursorSpan, remainingText);
+          this.timers.push(setTimeout(erase, newTextDelay, charIndex, text, typedElement, cursorSpan, remainingText));
         } else {
           cursorSpan.style.visibility = 'hidden';
         }
       }
     }
 
-    function erase(charIndex, text, typedElement, cursorSpan, remainingText = []) {
+    const erase = (charIndex, text, typedElement, cursorSpan, remainingText = []) => {
       if (charIndex > 0) {
         if (!cursorSpan.classList.contains('typing')) {
           cursorSpan.classList.add('typing');
         }
         typedElement.textContent = text.substring(0, charIndex-1);
-        setTimeout(erase, erasingDelay, charIndex - 1, text, typedElement, cursorSpan, remainingText);
+        this.timers.push(setTimeout(erase, erasingDelay, charIndex - 1, text, typedElement, cursorSpan, remainingText));
       } else {
         cursorSpan.classList.remove("typing");
         if (remainingText.length > 0) {
-          setTimeout(type, newTextDelay, 0, remainingText[0], typedElement, cursorSpan, remainingText.slice(1));
+          this.timers.push(setTimeout(type, newTextDelay, 0, remainingText[0], typedElement, cursorSpan, remainingText.slice(1)));
         }
       }
     }
@@ -97,31 +111,35 @@ export default class Intro extends Component {
     cursorSpans[0].style.visibility = 'visible';
     // Type the first line
     let delay = initialDelay;
-    setTimeout(type, delay, 0, lines[0][0], typedTexts[0], cursorSpans[0]);
+    this.timers.push(setTimeout(type, delay, 0, lines[0][0], typedTexts[0], cursorSpans[0]));
 
     // Show cursor on the second line
     delay += typingDelay * lines[0][0].length;
-    setTimeout(() => {cursorSpans[1].style.visibility = 'visible'}, delay);
+    this.timers.push(setTimeout(() => {cursorSpans[1].style.visibility = 'visible'}, delay));
     // Type the second time
     delay += newTextDelay;
-    setTimeout(type, delay, 0, lines[1][0], typedTexts[1], cursorSpans[1]);
+    this.timers.push(setTimeout(type, delay, 0, lines[1][0], typedTexts[1], cursorSpans[1]));
 
     // Show cursor on the third line
     delay += typingDelay * lines[1][0].length;
-    setTimeout(() => {cursorSpans[2].style.visibility = 'visible'}, delay);
+    this.timers.push(setTimeout(() => {cursorSpans[2].style.visibility = 'visible'}, delay));
     // Type the third line
     delay += newTextDelay;
-    setTimeout(type, delay, 0, lines[2][0], typedTexts[2], cursorSpans[2], lines[2].slice(1));
+    this.timers.push(setTimeout(type, delay, 0, lines[2][0], typedTexts[2], cursorSpans[2], lines[2].slice(1)));
 
     // Start exit animation
     delay += lines[2].reduce((memo, curr) => memo + curr.length, 0) * (typingDelay + erasingDelay) + (lines[2].length + 2) * (newTextDelay);
-    setTimeout(() => {
+    this.timers.push(setTimeout(() => {
       exitCircle.style.visibility = 'visible';
       exitCircle.style.animation = 'animate 2s ease-in forwards';
-    }, delay);
+    }, delay));
 
     // Show HomePage
     delay += 3000;
-    setTimeout(this.props.showHome, delay);
+    this.timers.push(setTimeout(this.props.showHome, delay));
+  }
+
+  componentWillUnmount() {
+    this.timers.forEach(timer => {clearTimeout(timer);});
   }
 }
