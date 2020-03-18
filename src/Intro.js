@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import './Intro.css';
+
+// Inspired by: https://codepen.io/Coding_Journey/pen/BEMgbX
 export default class Intro extends Component {
   render() {
     return (
@@ -9,7 +11,7 @@ export default class Intro extends Component {
             <div className="row">
               <div className="col-12 text-center">
                 <h1 className="myName">
-                  <span className="typed-text"></span><span className="cursor">&nbsp;</span>
+                  <span className="typed-text"></span><span class="circle"></span><span className="cursor">&nbsp;</span>
                 </h1>
               </div>
             </div>
@@ -42,6 +44,7 @@ export default class Intro extends Component {
 
     const typedTexts = document.querySelectorAll('.typed-text');
     const cursorSpans = document.querySelectorAll('.cursor');
+    const exitCircle = document.querySelector('.circle');
 
     const initialDelay = 2000;
     const typingDelay = 200;
@@ -56,7 +59,7 @@ export default class Intro extends Component {
         }
         switch (text[charIndex]) {
           case '.':
-            typedElement.innerHTML += '<span class="colored animatable">.</span>';
+            typedElement.innerHTML += '<span class="colored">.</span>';
             break;
           case ')':
             typedElement.innerHTML += '<span class="smile colored">)</span>';
@@ -99,7 +102,13 @@ export default class Intro extends Component {
     setTimeout(type, delay, 0, lines[1][0], typedTexts[1], cursorSpans[1]);
     delay += typingDelay * lines[1][0].length;
     setTimeout(type, delay, 0, lines[2][0], typedTexts[2], cursorSpans[2], lines[2].slice(1));
-    // setTimeout(()=>document.querySelector('.container-fluid').addEventListener('click', (e)=>{e.target.classList.add('animation')}), delay)
+    // console.log(lines[2].reduce((memo, curr) => memo + curr.length, 0))
+    // TODO: calculate exact time
+    delay += newTextDelay * 3.5 * lines[2].length;
+    setTimeout(() => {
+      exitCircle.style.visibility = 'visible';
+      exitCircle.style.animation = 'animate 2s forwards';
+    }, delay);
 
     
   }

@@ -61,7 +61,20 @@ span.cursor.typing {
   100%  { background-color: #ccc; }
 }
 
+.circle {
+  visibility: hidden;
+  float: right;
+  background-color: #dd7732;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  transform: translate(-0.55rem,-1.75rem);
+  position: absolute;
+  bottom: 0;
+  z-index: 99;
+}
+
 @keyframes animate {
-  from { transform: perspective(400px) translate3d(0,0,0) rotateX(0) rotateY(0) rotateZ(0) ;}
-  to { transform: perspective(400px) translate3d(0,0,-5000px) rotateX(720deg) rotateY(360deg) rotateZ(-360deg); }
+  from {}
+  to { width: 2000px; height: 2000px; transform: translate(-1000px,1000px);}
 }
