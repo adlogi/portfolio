@@ -1,12 +1,61 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.fade-in {
+	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  color: #eee;
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.side-bar {
+  background-color: #dd7732;
+  background-size: cover;
+  /* background-blend-mode: multiply; */
+  /* multiply */
+  width: 42%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  transition-property: width, background-image;
+  transition-duration: .5s;
+  transition-timing-function: linear;
+}
+
+.side-bar-extended {
+  width: 80%;
+  background-image: url('../src/portfolio.jpg');
+}
+
+.section-link {
+  font-size: 6rem;
+  padding: 0;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+}
+
+.section-link span {
+  display: inline-block;
+  height: 100%;
+  mix-blend-mode: soft-light;
+  text-shadow: 4px 4px 8px #000;
+}
+/* multiply, overlay, color-burn, soft-light, difference, exclusion, hue */
+
+.section-link span:hover {
+  color: #dd7732;
+  mix-blend-mode: normal;
+  cursor: pointer;
 }
