@@ -1,11 +1,22 @@
 import React from 'react';
-// import './App.css';
-import Intro from './Intro'
+import Intro from './Intro';
+import HomePage from './HomePage';
 
 export default class App extends React.Component{
+  constructor() {
+    super();
+    this.state = {
+      playingIntro: true,
+    }
+  }
+
+  showHome = () => {
+    this.setState({playingIntro: false});
+  }
+
   render() {
     return (
-      <Intro />
+      this.state.playingIntro ? <Intro showHome={this.showHome} /> : <HomePage />
     );
   }
 }
