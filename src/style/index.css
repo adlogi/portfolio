@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,900&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +12,72 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h2 {
+  color: #dd7732;
+  font-size: 2rem;
+  /* font-family: 'Lora'; */
+  font-style: italic;
+  padding: 0;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: normal;
+  letter-spacing: 0.1rem;
+}
+
+.long-name {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  margin-right: -1rem;
+}
+
+.short-name {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  white-space: nowrap;
+  margin-right: -1rem;
+}
+
+.short-name a:link, 
+.short-name a:visited,
+.short-name a:hover,
+.short-name a:active {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.side-menu {
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  font-weight: 900;
+}
+.side-menu a:link, 
+.side-menu a:visited,
+.side-menu a:active {
+  color: #ccc;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #dd7732;
+}
+
+.side-menu a:hover {
+  color: #dd7732;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #ccc;
+}
+
+.selected a:link, 
+.selected a:visited,
+.selected a:active,
+.selected a:hover {
+  font-size: 130%;
+  color: #dd7732;
+  letter-spacing: 0.1rem;
+  text-shadow: 1px 1px 1px #ccc;
 }
