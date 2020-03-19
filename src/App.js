@@ -6,7 +6,7 @@ import Portfolio from './components/Portfolio';
 import Resume from './components/Resume';
 import HomePage from './components/HomePage';
 import { BrowserRouter as Router } from 'react-router-dom'
-import { Route, Switch, NavLink, Link } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
 
 export default class App extends React.Component{
