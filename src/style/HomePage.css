@@ -49,13 +49,20 @@
 .section-link span {
   display: inline-block;
   height: 100%;
-  mix-blend-mode: soft-light;
-  text-shadow: 4px 4px 8px #000;
 }
 /* multiply, overlay, color-burn, soft-light, difference, exclusion, hue */
 
-.section-link span:hover {
+.section-link a:link, 
+.section-link a:visited,
+.section-link a:active {
+  color: #ccc;
+  mix-blend-mode: soft-light;
+  text-shadow: 4px 4px 8px #000;
+  text-decoration: none;
+}
+
+.section-link a:hover {
   color: #dd7732;
   mix-blend-mode: normal;
-  cursor: pointer;
+  text-decoration: none;
 }
