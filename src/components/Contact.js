@@ -1,20 +1,25 @@
 import React, { Component } from 'react';
 import SideMenu from './SideMenu';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 export default class Contact extends Component {
   render() {
     return (
       <div className="container-fluid fade-in">
         <div className="row h-100">
-          <SideMenu selected='contact' />
-          <div className="col-xl-9 col-lg-12 h-100">
+          <div className="col-md-4 col-lg-3 align-self-center">
+            <SideMenu selected='contact' />
+          </div>
+          <div className="col-md-8 col-lg-9 flex-grow-1 my-5">
             <div className="row align-items-center h-100">
-              <div className="col-12 section-link pr-5 pl-4 pl-xl-0">
-                <h2>Selam!</h2>
-                <p>I'm Abdulrahman. I was born in Saudi Arabia, grew up in Syria, studied in the US, and now living in Turkey. I'm a front-end developer with experince in ReactJS.</p>
-                <p>I studied computer engineering and was part of the team at MIT that develops Scratch: the children's most popular programming language. In a parallel life, I design learning spaces and activities for children.</p>
+              <div className="col section-link px-5">
+                <div className="row">
+                  <div className="col-sm-4 text-center"><a href="https://github.com/adlogi" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a></div>
+                  <div className="col-sm-4 text-center"><a href="https://www.linkedin.com/in/adlogi/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedinIn} /></a></div>
+                  <div className="col-sm-4 text-center"><a href="https://twitter.com/adlogi" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} /></a></div>
+                </div>
               </div>
-              
             </div>
           </div>
         </div>

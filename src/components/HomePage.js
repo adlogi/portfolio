@@ -8,12 +8,12 @@ export default class HomePage extends Component {
     return (
       <div className="container-fluid fade-in">
         <div className="row h-100">
-          <div className="col-xl-3 col-lg-12 align-self-center">
-            <h1 className="short-name text-xl-center text-lg-left">
+          <div className="col-12 col-md-3 align-self-center">
+            <h1 className="short-name text-center my-5">
             <Link to='./'>A<span className="colored">.</span>Y<span className="colored">.</span>idlbi<span className="smile colored">)</span></Link>
             </h1>
           </div>
-          <div className="col-xl-9 col-lg-12 h-100">
+          <div className="col-12 col-md-9 h-100">
             <div className="row align-items-center h-100">
               <div className="col-12 side-bar h-100"></div>
               <div className="col-12 section-link text-center h-25">
