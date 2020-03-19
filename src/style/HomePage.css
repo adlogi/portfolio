@@ -25,7 +25,7 @@
   background-size: cover;
   /* background-blend-mode: multiply; */
   /* multiply */
-  width: 42%;
+  width: 50%;
   height: 100%;
   position: absolute;
   right: 0;
@@ -35,8 +35,8 @@
 }
 
 .side-bar-extended {
-  width: 80%;
-  background-image: url('../src/portfolio.jpg');
+  width: 100%;
+  background-image: url('../media/portfolio.jpg');
 }
 
 .section-link {
