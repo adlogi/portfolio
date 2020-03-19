@@ -25,13 +25,28 @@ export default class App extends React.Component{
     return (
       <Router>
         <Switch>
-          <Route exact path='/' render={() =>
-            this.state.playingIntro ? <Intro showHome={this.showHome} /> : <HomePage />
-          } />
-          <Route exact path='/bio' component={<Bio />} />
-          <Route exact path='/resume' component={<Resume />} />
-          <Route exact path='/portfolio' component={<Portfolio />} />
-          <Route exact path='/contact' component={<Contact />} />
+          <Route
+            exact path='/'
+            render={() =>
+              this.state.playingIntro ? <Intro showHome={this.showHome} /> : <HomePage />
+            }
+          />
+          <Route
+            exact path='/bio'
+            component={Bio}
+          />
+          <Route
+            exact path='/resume'
+            component={Resume}
+          />
+          <Route
+            exact path='/portfolio'
+            component={Portfolio}
+          />
+          <Route
+            exact path='/contact'
+            component={Contact}
+          />
         </Switch>
       </Router>
       
