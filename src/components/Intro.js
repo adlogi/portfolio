@@ -23,14 +23,14 @@ export default class Intro extends Component {
             </div>
             <div className="row">
               <div className="col-12 text-center">
-                <p>
+                <p className="intro">
                   <span className="typed-text"></span><span className="cursor">&nbsp;</span>
                 </p>
               </div>
             </div>
             <div className="row">
               <div className="col-12 text-center">
-                <p className="tech">
+                <p className="tech intro">
                   <span className="typed-text"></span><span className="cursor">&nbsp;</span>
                 </p>
               </div>
@@ -51,7 +51,7 @@ export default class Intro extends Component {
   componentDidMount() {
     const lines = [
       ['Abdulrahman Y. idlbi)'],
-      ['Front End Developer'],
+      ['Front-End Developer'],
       ['HTML', 'CSS', 'JavaScript', 'ReactJS']
     ];
 

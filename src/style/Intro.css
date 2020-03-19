@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,900&display=swap');
-
-
 * {
   margin: 0;
   padding: 0;
@@ -17,21 +14,6 @@ body {
   height: 100vh;
 }
 
-.long-name {
-  font-size: 3rem;
-  padding: 0.5rem;
-  font-weight: 600;
-  letter-spacing: 0.1rem;
-}
-
-.short-name {
-  font-size: 3rem;
-  padding: 0.5rem;
-  font-weight: 600;
-  letter-spacing: 0.1rem;
-  white-space: nowrap;
-}
-
 .colored {
   color: #dd7732;
 }
@@ -41,7 +23,7 @@ body {
   transform: rotate(85deg) translate(1.8rem, 4rem);
 }
 
-div p {
+div p.intro {
   font-size: 2rem;
   padding: 0.5rem;
   font-weight: normal;
