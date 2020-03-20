@@ -9,11 +9,18 @@
 .smile {
   display: inline-block;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.long-name .smile {
+  transform: rotate(83deg) translate(1.2rem, 2.8rem);
+}
+
+.short-name .smile {
   transform: rotate(83deg) translate(1.9rem, 4.1rem);
 }
 
 div p.intro {
-  font-size: 2rem;
+  font-size: 1.4rem;
   padding: 0.5rem;
   font-weight: normal;
   letter-spacing: 0.1rem;
@@ -46,12 +53,12 @@ span.cursor.typing {
 }
 
 .circle {
-  visibility: hidden;
+  /* visibility: hidden; */
   background-color: #dd7732;
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  transform: translate(-10rem,-1.75rem);
+  transform: translate(-9.9rem,-1.4rem);
   position: absolute;
   bottom: 0;
   z-index: 99;
@@ -93,4 +100,25 @@ span.cursor.typing {
 
 .btn:hover {
   color: #dd7732;
+}
+
+@media (min-width: 576px) {
+  div p.intro {
+    font-size: 2rem;
+  }
+  .long-name .smile {
+    transform: rotate(83deg) translate(1.9rem, 4.1rem);
+  }
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+  
+}
+
+@media (min-width: 1200px) {
+  
 }

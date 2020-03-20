@@ -63,7 +63,7 @@ html {
 
 .section-link {
   padding: 0;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 900;
   letter-spacing: 0.1rem;
 }
@@ -91,12 +91,14 @@ html {
 
 @media (min-width: 576px) {
   .section-link {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 
 @media (min-width: 768px) {
-  
+  .section-link {
+    font-size: 5rem;
+  }
 }
 
 @media (min-width: 992px) {

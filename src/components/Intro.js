@@ -14,7 +14,7 @@ export default class Intro extends Component {
       <div id='intro' className="container-fluid">
         <div className="row h-100">
           <div className="col-12 align-self-center">
-            <div className="row">
+            <div className="row mb-3">
               <div className="col-12 text-center">
                 <h1 className="long-name">
                   <span className="typed-text"></span><span className="circle"></span><span className="cursor">&nbsp;</span>
