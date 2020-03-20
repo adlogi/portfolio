@@ -14,7 +14,7 @@ export default class Bio extends Component {
               <div className="col px-5">
                 <h2 className="mt-3">Selam!</h2>
                 <p>I'm Abdulrahman — a.k.a. <span className="font-italic">@adlogi</span>. I was born in Saudi Arabia, grew up in Syria, studied in the US, and now living in Turkey. I'm a front-end developer with experince in ReactJS.</p>
-                <p>I studied computer engineering and was part of the team at MIT that develops <a href="https://scratch.mit.edu/" target="_blank" rel="noopener noreferrer" className="font-italic">Scratch</a>: the children's most popular programming language. In a parallel life, I design creative learning spaces and activities for children.</p>
+                <p>I studied computer engineering and was part of the team at MIT that develops <a href="https://scratch.mit.edu/" target="_blank" rel="noopener noreferrer" className="font-italic">Scratch</a>: the children's most popular programming language. In a parallel life, I design creative learning spaces and activities for children in various contexts. Did you watch <a href="https://www.youtube.com/watch?v=uOwWqOHE6ng" target="_blank" rel="noopener noreferrer" className="font-italic">my talk</a> about keeping children motivated to learn?.</p>
               </div>
             </div>
           </div>
