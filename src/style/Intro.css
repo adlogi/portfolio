@@ -8,7 +8,8 @@
 
 .smile {
   display: inline-block;
-  transform: rotate(85deg) translate(1.8rem, 4rem);
+  font-family: Arial, Helvetica, sans-serif;
+  transform: rotate(83deg) translate(1.9rem, 4.1rem);
 }
 
 div p.intro {
@@ -85,7 +86,6 @@ span.cursor.typing {
     opacity: 0;
   }
 }
-
 
 .btn {
   color: #ccc;
