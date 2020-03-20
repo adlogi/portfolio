@@ -1,23 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,900&display=swap');
 
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000;
+  color: #eee;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h2 {
   color: #dd7732;
   font-size: 2rem;
-  /* font-family: 'Lora'; */
   font-style: italic;
   padding: 0;
   font-weight: 600;
@@ -45,6 +44,16 @@ p {
   margin-right: -1rem;
 }
 
+.side-menu {
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  font-weight: 900;
+}
+
+/**********
+*  Links  *
+**********/
+
 .short-name a:link, 
 .short-name a:visited,
 .short-name a:hover,
@@ -53,24 +62,16 @@ p {
   text-decoration: none;
 }
 
-.side-menu {
-  font-size: 1.8rem;
-  letter-spacing: 0.1rem;
-  font-weight: 900;
-}
-
 .side-menu a:link, 
 .side-menu a:visited,
 .side-menu a:active {
   color: #ccc;
   text-decoration: none;
-  /* text-shadow: 1px 1px 1px #dd7732; */
 }
 
 .side-menu a:hover {
   color: #dd7732;
   text-decoration: none;
-  /* text-shadow: 1px 1px 1px #ccc; */
 }
 
 .selected a:link, 
@@ -80,8 +81,23 @@ p {
   font-size: 130%;
   color: #dd7732;
   letter-spacing: 0.1rem;
-  /* text-shadow: 1px 1px 1px #ccc; */
 }
+
+p a:link, 
+p a:visited,
+p a:active {
+  color: #ccc;
+  text-decoration: none;
+}
+
+p a:hover {
+  color: #dd7732;
+  text-decoration: none;
+}
+
+/**************************
+*  Portfolio.js carousel  *
+**************************/
 
 div.carousel {
   border-color: #dd7732;
@@ -91,9 +107,6 @@ div.carousel {
 
 .carousel-caption {
   background-color: rgba(0, 0, 0, 0.7);
-  /* border-color: #dd7732;
-  border-width: 1px;
-  border-style: solid; */
   border-radius: 10px;
 }
 
@@ -108,14 +121,3 @@ div.carousel {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dd7732' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3e%3c/svg%3e");
 }
 
-p a:link, 
-p a:visited,
-p a:active {
-  color: #ccc;
-  text-decoration: none;
-}
-
-p a:hover {
-  color: #dd7732;
-  text-decoration: none;
-}
