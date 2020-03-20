@@ -13,10 +13,10 @@ export default class Portfolio extends Component {
     return (
       <div className="container-fluid fade-in">
         <div className="row h-100">
-          <div className="col-md-4 col-lg-3 align-self-center">
+          <div id="side-menu-container" className="col-md-4 col-lg-3 align-self-center">
             <SideMenu selected='portfolio' />
           </div>
-          <div className="col-md-8 col-lg-9 flex-grow-1 my-5">
+          <div className="offset-md-4 col-md-8 offset-lg-3 col-lg-9 flex-grow-1 my-5">
             <div className="row align-items-center h-100">
               <div className="col px-5">
                 <Carousel fade={true}>

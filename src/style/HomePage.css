@@ -43,17 +43,17 @@ html {
 }
 
 .section-link {
-  font-size: 6rem;
   padding: 0;
+  font-size: 4rem;
   font-weight: 900;
   letter-spacing: 0.1rem;
 }
 
 .section-link span {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   height: 100%;
 }
-/* multiply, overlay, color-burn, soft-light, difference, exclusion, hue */
 
 .section-link a:link, 
 .section-link a:visited,
@@ -68,4 +68,24 @@ html {
   color: #dd7732;
   mix-blend-mode: normal;
   text-decoration: none;
+}
+
+@media (min-width: 576px) {
+  .section-link {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  
+}
+
+@media (min-width: 992px) {
+  .section-link {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  
 }

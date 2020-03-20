@@ -8,7 +8,7 @@ export default class SideMenu extends Component {
       <>
         <div className="row h-20 mb-5">
           <div className="col">
-            <h1 className="short-name text-center mt-5"><Link to='./'>
+            <h1 className="short-name text-center mt-5 mt-md-0"><Link to='./'>
               A<span className="colored">.</span>Y<span className="colored">.</span>idlbi<span className="smile colored">)</span></Link>
             </h1>
           </div>
