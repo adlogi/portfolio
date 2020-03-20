@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import '../style/SideMenu.css';
 
 export default class SideMenu extends Component {
   render() {

@@ -55,12 +55,6 @@ p {
   }
 }
 
-.side-menu {
-  font-size: 1.8rem;
-  font-weight: 900;
-  letter-spacing: 0.1rem;
-}
-
 .colored {
   color: #dd7732;
 }
@@ -119,27 +113,6 @@ p a:hover {
 .short-name a:active {
   color: #ccc;
   text-decoration: none;
-}
-
-.side-menu a:link, 
-.side-menu a:visited,
-.side-menu a:active {
-  color: #ccc;
-  text-decoration: none;
-}
-
-.side-menu a:hover {
-  color: #dd7732;
-  text-decoration: none;
-}
-
-.selected a:link, 
-.selected a:visited,
-.selected a:active,
-.selected a:hover {
-  color: #dd7732;
-  font-size: 130%;
-  letter-spacing: 0.1rem;
 }
 
 @media (min-width: 576px) {
