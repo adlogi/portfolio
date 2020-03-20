@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SideMenu from './SideMenu';
+import '../style/Resume.css';
 
 export default class Resume extends Component {
   render() {
@@ -36,9 +37,9 @@ export default class Resume extends Component {
                   </div>
                   <div className="tab-pane fade" id="nav-education" role="tabpanel" aria-labelledby="nav-education-tab">
                     <p className="mt-3 mb-0">Front-End Web Development Program, Flatiron School (2020)</p>
-                    <small className="text-muted">JavaScript & React online program / Re:Coded Istanbul Bootcamp.</small>
+                    <p className="text-muted smaller">JavaScript & React online program / Re:Coded Istanbul Bootcamp.</p>
                     <p className="mt-3 mb-0">SM in Media Arts & Sciences, MIT (2014)</p>
-                    <small className="text-muted">The Lifelong Kindergarten research group, developing new technologies and activities that engage people in creative learning experiences.</small>
+                    <small className="text-muted smaller">The Lifelong Kindergarten research group, developing new technologies and activities that engage people in creative learning experiences.</small>
                     <p className="mt-3 mb-0">BS in Computer Engineering, Damascus University (2009)</p>
                   </div>
                 </div>

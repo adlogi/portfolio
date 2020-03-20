@@ -2,28 +2,6 @@ html {
   --image-source: url('../media/bio.jpg');
 }
 
-.fade-in {
-	-webkit-animation: fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-@-webkit-keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .side-drop-color {
   background-color: #dd7732;
   background-size: cover;
@@ -32,13 +10,13 @@ html {
   position: absolute;
   right: 0;
   transition:
-    width .5s linear .6s,
+    width .5s linear .6s;
 }
 
 .side-drop-color-active {
   width: 100%;
   transition:
-    width .5s ease,
+    width .5s ease;
 }
 
 .side-drop-image {

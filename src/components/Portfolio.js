@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import SideMenu from './SideMenu';
+import Carousel from 'react-bootstrap/Carousel';
+import '../style/Portfolio.css';
 import moviexplorer from '../media/moviexplorer.png';
 import minesweeper from '../media/minesweeper.png';
 import abbuloka from '../media/abbuloka.png';
-import Carousel from 'react-bootstrap/Carousel';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
