@@ -95,6 +95,30 @@ p a:hover {
   text-decoration: none;
 }
 
+/******************************
+*  Resume.js navigation tabs  *
+******************************/
+
+nav li.nav-item.nav-link {
+  color: #dd7732;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border: 1px solid #ccc;
+  margin: 2px 2px 0 2px;
+  cursor: pointer;
+}
+
+nav li.nav-item.nav-link.active {
+  color: #000;
+  background-color: #dd7732;
+}
+
+nav li.nav-item.nav-link:hover {
+  color: #000;
+  background-color: #dd7732;
+}
+
 /**************************
 *  Portfolio.js carousel  *
 **************************/
