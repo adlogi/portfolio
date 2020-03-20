@@ -18,7 +18,8 @@ export default class HomePage extends Component {
           </div>
           <div className="col-md-8 col-lg-9 flex-grow-1 mt-5 mt-md-0">
             <div className="row align-items-center h-100">
-              <div className="col-12 side-bar h-100"></div>
+              <div className="col-12 side-drop-color h-100"></div>
+              <div className="col-12 side-drop-image h-100"></div>
               <div className="col-12 section-link text-center h-25">
                 <Link to='./bio'><span id="bio-link">BIO</span></Link>
               </div>
@@ -40,7 +41,8 @@ export default class HomePage extends Component {
 
   componentDidMount() {
     const sectionLinks = document.querySelectorAll('.section-link span');
-    const sideBar = document.querySelector('.side-bar');
+    const sideDropColor = document.querySelector('.side-drop-color');
+    const sideDropImage = document.querySelector('.side-drop-image');
     const bgImages = {
       'bio': bio,
       'resume': resume,
@@ -49,12 +51,14 @@ export default class HomePage extends Component {
     }
 
     sectionLinks.forEach(section => section.addEventListener('mouseover', (event) => {
-      sideBar.style.setProperty('--image-source', `url(${bgImages[event.target.id.slice(0, -5)]})`);
-      sideBar.classList.add('side-bar-extended');
+      sideDropImage.style.setProperty('--image-source', `url(${bgImages[event.target.id.slice(0, -5)]})`);
+      sideDropColor.classList.add('side-drop-color-active');
+      sideDropImage.classList.add('side-drop-image-active');
     }, false));
     sectionLinks.forEach(section => section.addEventListener('mouseout', () => {
-      sideBar.style.setProperty('--image-source', 'none');
-      sideBar.classList.remove('side-bar-extended');
+      // sideDropColor.style.setProperty('--image-source', 'none');
+      sideDropColor.classList.remove('side-drop-color-active');
+      sideDropImage.classList.remove('side-drop-image-active');
     }, false));
   }
 }

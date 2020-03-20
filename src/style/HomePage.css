@@ -3,8 +3,8 @@ html {
 }
 
 .fade-in {
-	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	-webkit-animation: fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 @-webkit-keyframes fade-in {
@@ -24,22 +24,41 @@ html {
   }
 }
 
-.side-bar {
+.side-drop-color {
   background-color: #dd7732;
   background-size: cover;
-  background-image: none;
   width: 50%;
   height: 100%;
   position: absolute;
   right: 0;
   transition:
-    width .5s ease,
-    background-image .5s linear;
+    width .5s linear .6s,
 }
 
-.side-bar-extended {
+.side-drop-color-active {
   width: 100%;
+  transition:
+    width .5s ease,
+}
+
+.side-drop-image {
   background-image: var(--image-source);
+  background-size: cover;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  transition:
+    opacity .5s linear .25s,
+    background-image .5s linear .25s;
+}
+
+.side-drop-image-active {
+  opacity: 1;
+  transition:
+    opacity .5s linear .25s,
+    background-image .5s linear .25s;
 }
 
 .section-link {
