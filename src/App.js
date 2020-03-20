@@ -1,13 +1,12 @@
 import React from 'react';
-import Intro from './components/Intro';
-import Bio from './components/Bio';
-import Contact from './components/Contact';
-import Portfolio from './components/Portfolio';
-import Resume from './components/Resume';
-import HomePage from './components/HomePage';
 import { BrowserRouter as Router } from 'react-router-dom'
 import { Route, Switch } from 'react-router-dom'
-
+import Intro from './components/Intro';
+import HomePage from './components/HomePage';
+import Bio from './components/Bio';
+import Resume from './components/Resume';
+import Contact from './components/Contact';
+import Portfolio from './components/Portfolio';
 
 export default class App extends React.Component{
   constructor() {
