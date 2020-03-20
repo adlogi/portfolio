@@ -1,3 +1,7 @@
+html {
+  --image-source: url('../media/bio.jpg');
+}
+
 .fade-in {
 	-webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -23,20 +27,19 @@
 .side-bar {
   background-color: #dd7732;
   background-size: cover;
-  /* background-blend-mode: multiply; */
-  /* multiply */
+  background-image: none;
   width: 50%;
   height: 100%;
   position: absolute;
   right: 0;
-  transition-property: width, background-image;
-  transition-duration: .5s;
-  transition-timing-function: linear;
+  transition:
+    width .5s ease,
+    background-image .5s linear;
 }
 
 .side-bar-extended {
   width: 100%;
-  background-image: url('../media/portfolio.jpg');
+  background-image: var(--image-source);
 }
 
 .section-link {
