@@ -28,7 +28,7 @@ export default class Portfolio extends Component {
                     />
                     <Carousel.Caption>
                         <h3>movieXplorer</h3>
-                        <p>
+                        <p className="icons">
                           <a href="https://github.com/adlogi/movieXplorer" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a>{' '}
                           <a href="./portfolio" rel="noopener noreferrer"><FontAwesomeIcon icon={faLink} /></a>
                         </p>
@@ -42,7 +42,7 @@ export default class Portfolio extends Component {
                     />
                     <Carousel.Caption>
                         <h3>Minesweeper</h3>
-                        <p>
+                        <p className="icons">
                           <a href="https://github.com/adlogi/minesweeper" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a>{' '}
                           <a href="https://adlogi.github.io/minesweeper/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLink} /></a>
                         </p>
@@ -56,7 +56,7 @@ export default class Portfolio extends Component {
                     />
                     <Carousel.Caption>
                         <h3>Abbuloka</h3>
-                        <p>
+                        <p className="icons">
                           <a href="https://github.com/bsurmen/abbulokapremium" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a>{' '}
                           <a href="https://abbuloka.netlify.com/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLink} /></a>
                         </p>
