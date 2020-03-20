@@ -56,7 +56,6 @@ export default class HomePage extends Component {
       sideDropImage.classList.add('side-drop-image-active');
     }, false));
     sectionLinks.forEach(section => section.addEventListener('mouseout', () => {
-      // sideDropColor.style.setProperty('--image-source', 'none');
       sideDropColor.classList.remove('side-drop-color-active');
       sideDropImage.classList.remove('side-drop-image-active');
     }, false));
