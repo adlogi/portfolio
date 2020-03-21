@@ -2,31 +2,43 @@
 *  Resume.js navigation tabs  *
 ******************************/
 
-nav li.nav-item.nav-link {
-  color: #dd7732;
-  background-color: transparent;
+.accordion .card {
+  color: #ccc;
+  background-color: #dd7732;
+}
+
+.card-header {
+  color: #ccc;
+  background-color: #000;
   font-size: 1.5rem;
   font-weight: 600;
-  border: 1px solid #ccc;
-  margin: 2px 2px 0 2px;
+}
+
+.card-header:hover {
+  color: #dd7732;
+  background-color: #000;
   cursor: pointer;
 }
 
-nav li.nav-item.nav-link.active {
-  color: #000;
-  background-color: #dd7732;
+.card-body {
+  color: #ccc;
+  background-color: #000;
 }
 
-nav li.nav-item.nav-link:hover {
-  color: #000;
-  background-color: #dd7732;
+.show-header {
+  color: #dd7732;
 }
 
-.nav-tabs {
-  border-bottom: 0px solid #dd7732
+.more-icon {
+  transition: transform .2s linear;
 }
 
-.tab-pane {
-  height: 100%;
-  overflow-y: scroll;
+/* .show-header .more-icon {
+  transform: rotate(90deg);
+  transition: transform .2s linear;
+} */
+
+.show-header span:last-child {
+  transform: rotate(90deg);
+  transition: transform .2s linear;
 }
