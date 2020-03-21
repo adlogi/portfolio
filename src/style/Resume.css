@@ -29,16 +29,19 @@
   color: #dd7732;
 }
 
-.more-icon {
+.card-header span:last-child {
   transition: transform .2s linear;
 }
 
-/* .show-header .more-icon {
+.card-header.show-header span:last-child {
   transform: rotate(90deg);
   transition: transform .2s linear;
-} */
+}
 
-.show-header span:last-child {
-  transform: rotate(90deg);
-  transition: transform .2s linear;
+li.pl-5::before {
+  content: '- ';
+}
+
+.border-bottom {
+  border-color: #dd7732 !important;
 }

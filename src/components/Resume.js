@@ -11,7 +11,6 @@ export default class Resume extends Component {
   constructor(props) {
     super(props);
     this.resume = require('../data/resume.json');
-    console.log(this.resume.summary[0])
   }
   
   // remove the 'show-header' class from all card headers
@@ -54,7 +53,9 @@ export default class Resume extends Component {
                     </Accordion.Toggle>
                     <Accordion.Collapse eventKey="0">
                       <Card.Body>
-                        {this.resume.summary.map(paragraph => <p>{paragraph}</p>)}
+                        {this.resume.summary.map((paragraph, index) =>
+                          <p key={index}>{paragraph}</p>
+                        )}
                       </Card.Body>
                     </Accordion.Collapse>
                   </Card>
@@ -73,7 +74,13 @@ export default class Resume extends Component {
                       <span><FontAwesomeIcon icon={chevronIcon} /></span>
                     </Accordion.Toggle>
                     <Accordion.Collapse eventKey="2">
-                      <Card.Body>Hello! I'm another body</Card.Body>
+                      <Card.Body>
+                        <ul className="list-unstyled">
+                          {this.resume.skills.map((skill, index) => 
+                              <li key={index} className="pl-5 my-1">{skill}</li>
+                          )}
+                        </ul>
+                      </Card.Body>
                     </Accordion.Collapse>
                   </Card>
                   <Card>
@@ -83,10 +90,25 @@ export default class Resume extends Component {
                     </Accordion.Toggle>
                     <Accordion.Collapse eventKey="3">
                       <Card.Body>
-                        {this.resume.work.map(item => (
-                          <div className="mb-3">
-                            <p className="mb-0">{item.title}</p>
-                            <small className="text-muted smaller">{item.details}</small>
+                        {this.resume.work.map((job, index) => (
+                          <div key={index} className="mb-3">
+                            <h4 className="mb-0 pb-1 border-bottom d-flex justify-content-between">
+                              {job.organization}
+                              <small className="text-muted smaller">{job.location}</small>
+                            </h4>
+                            {job.positions.map((position, index) => { return (
+                              <div key={index}>
+                                <p className="pl-3 mb-0 mt-2 d-flex justify-content-between">
+                                  {position.title}
+                                  <small className="text-muted smaller text-nowrap">{position.dates}</small>
+                                </p>
+                                <ul className="list-unstyled">
+                                  {position.details.map((detail, index) => 
+                                      <li key={index} className="pl-5 my-1">{detail}</li>
+                                  )}
+                                </ul>
+                              </div>
+                            )})}
                           </div>
                         ))}
                       </Card.Body>
@@ -99,10 +121,14 @@ export default class Resume extends Component {
                     </Accordion.Toggle>
                     <Accordion.Collapse eventKey="4">
                       <Card.Body>
-                        {this.resume.education.map(item => (
-                          <div className="mb-3">
-                            <p className="mb-0">{item.title}</p>
-                            <small className="text-muted smaller">{item.details}</small>
+                        {this.resume.education.map((degree, index) => (
+                          <div key={index} className="mb-3">
+                            <p className="mb-0">{degree.title}</p>
+                            <ul className="list-unstyled">
+                              {degree.details.map((detail, index) =>
+                                <li key={index} className="pl-5 my-1">{detail}</li>
+                              )}
+                            </ul>
                           </div>
                         ))}
                       </Card.Body>
