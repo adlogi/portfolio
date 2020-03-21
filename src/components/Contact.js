@@ -8,9 +8,7 @@ export default class Contact extends Component {
     return (
       <div className="container-fluid fade-in">
         <div className="row h-100">
-          <div id="side-menu-container" className="col-md-4 col-lg-3 align-self-center">
-            <SideMenu selected='contact' />
-          </div>
+          <SideMenu selected='contact' />
           <div className="offset-md-4 col-md-8 offset-lg-3 col-lg-9 flex-grow-1 my-5">
             <div className="row align-items-center h-100">
               <div className="col section-link px-5">

@@ -1,3 +1,21 @@
+html {
+  --menu-background-source: url('../media/bio.jpg');
+}
+
+#side-menu-container {
+  padding: 0;
+  /* height: 100vh; */
+  background-image: var(--menu-background-source);
+  background-size: cover;
+  background-position: center;
+}
+
+#side-menu-container > div {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 .side-menu {
   font-size: 1.8rem;
   font-weight: 900;
@@ -23,4 +41,25 @@
   color: #dd7732;
   font-size: 130%;
   letter-spacing: 0.1rem;
+}
+
+@media (min-width: 576px) {
+  #side-menu-container {
+      position: relative;
+  }
+}
+
+@media (min-width: 768px) {
+  #side-menu-container {
+    height: 100vh;
+    position: fixed;
+  }
+}
+
+@media (min-width: 992px) {
+  
+}
+
+@media (min-width: 1200px) {
+  
 }
