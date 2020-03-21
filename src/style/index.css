@@ -31,6 +31,17 @@ p {
 
 .container-fluid {
   height: 100vh;
+  padding: 0;
+}
+
+.container-fluid > div.row {
+  height: 100%;
+}
+
+/* rows are having -15 margins by default for some unknown reason */
+.row {
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .fade-in {
@@ -122,15 +133,10 @@ p a:hover {
   .long-name .smile {
     transform: rotate(83deg) translate(1.9rem, 4.1rem);
   }
-  #side-menu-container {
-      position: relative;
-  }
 }
 
 @media (min-width: 768px) {
-  #side-menu-container {
-    position: fixed;
-  }
+  
 }
 
 @media (min-width: 992px) {

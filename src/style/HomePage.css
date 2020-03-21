@@ -1,5 +1,5 @@
 html {
-  --image-source: url('../media/bio.jpg');
+  --background-source: url('../media/bio.jpg');
 }
 
 .side-drop-color {
@@ -20,7 +20,7 @@ html {
 }
 
 .side-drop-image {
-  background-image: var(--image-source);
+  background-image: var(--background-source);
   background-size: cover;
   opacity: 0;
   width: 100%;

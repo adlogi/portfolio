@@ -51,7 +51,7 @@ export default class HomePage extends Component {
     }
 
     sectionLinks.forEach(section => section.addEventListener('mouseover', (event) => {
-      sideDropImage.style.setProperty('--image-source', `url(${bgImages[event.target.id.slice(0, -5)]})`);
+      sideDropImage.style.setProperty('--background-source', `url(${bgImages[event.target.id.slice(0, -5)]})`);
       sideDropColor.classList.add('side-drop-color-active');
       sideDropImage.classList.add('side-drop-image-active');
     }, false));
