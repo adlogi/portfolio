@@ -8,6 +8,12 @@ import { faChevronCircleRight as chevronIcon} from '@fortawesome/free-solid-svg-
 // import { faAngleDoubleRight as chevronIcon} from '@fortawesome/free-solid-svg-icons';
 
 export default class Resume extends Component {
+  constructor(props) {
+    super(props);
+    this.resume = require('../data/resume.json');
+    console.log(this.resume.summary[0])
+  }
+  
   // remove the 'show-header' class from all card headers
   clearHeaders = () => {
     const cardHeaders = document.querySelectorAll('.card-header');
@@ -48,7 +54,7 @@ export default class Resume extends Component {
                     </Accordion.Toggle>
                     <Accordion.Collapse eventKey="0">
                       <Card.Body>
-                        <p className="mb-0">Front-end web developer with a passion for [their personal mission].  With experience in Ruby on Rails, JavaScript, and React and a background in X, I discovered web development through  [Y]. I bring strong skills in [team-building and project management] that help [what type of companies] [drive what positive result/impact]. [Other unique anecdote]. With a background in computer engineering and learning sciences, I know how to approach people and technology.</p>
+                        {this.resume.summary.map(paragraph => <p>{paragraph}</p>)}
                       </Card.Body>
                     </Accordion.Collapse>
                   </Card>
@@ -77,11 +83,12 @@ export default class Resume extends Component {
                     </Accordion.Toggle>
                     <Accordion.Collapse eventKey="3">
                       <Card.Body>
-                        <p className="mb-0">Creative Learning Consultant (2014 - present)</p>
-                        <p className="text-muted smaller">JavaScript & React online program / Re:Coded Istanbul Bootcamp.</p>
-                        <p className="mt-3 mb-0">SM in Media Arts & Sciences, MIT (2014)</p>
-                        <small className="text-muted smaller">The Lifelong Kindergarten research group, developing new technologies and activities that engage people in creative learning experiences.</small>
-                        <p className="mt-3 mb-0">BS in Computer Engineering, Damascus University (2009)</p>
+                        {this.resume.work.map(item => (
+                          <div className="mb-3">
+                            <p className="mb-0">{item.title}</p>
+                            <small className="text-muted smaller">{item.details}</small>
+                          </div>
+                        ))}
                       </Card.Body>
                     </Accordion.Collapse>
                   </Card>
@@ -92,11 +99,12 @@ export default class Resume extends Component {
                     </Accordion.Toggle>
                     <Accordion.Collapse eventKey="4">
                       <Card.Body>
-                        <p className="mb-0">Front-End Web Development Program, Flatiron School (2020)</p>
-                        <p className="text-muted smaller">JavaScript & React online program / Re:Coded Istanbul Bootcamp.</p>
-                        <p className="mt-3 mb-0">SM in Media Arts & Sciences, MIT (2014)</p>
-                        <small className="text-muted smaller">The Lifelong Kindergarten research group, developing new technologies and activities that engage people in creative learning experiences.</small>
-                        <p className="mt-3 mb-0">BS in Computer Engineering, Damascus University (2009)</p>
+                        {this.resume.education.map(item => (
+                          <div className="mb-3">
+                            <p className="mb-0">{item.title}</p>
+                            <small className="text-muted smaller">{item.details}</small>
+                          </div>
+                        ))}
                       </Card.Body>
                     </Accordion.Collapse>
                   </Card>

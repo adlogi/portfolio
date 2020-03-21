@@ -1,0 +1,34 @@
+{
+  "summary": [
+    "Front-end web developer with a passion for [their personal mission].  With experience in Ruby on Rails, JavaScript, and React and a background in X, I discovered web development through  [Y]. I bring strong skills in [team-building and project management] that help [what type of companies] [drive what positive result/impact]. [Other unique anecdote]. With a background in computer engineering and learning sciences, I know how to approach people and technology.",
+    "I'm a front-end developer with experince in ReactJS.",
+    "I see coding as a form of expression: a paintbrush. And I like to use it to create experiences that help others express themselves too.",
+    "I studied computer engineering and learning sciences. I was part of the team at MIT that develops Scratch: the children's most popular programming language. Beside coding, I design creative learning spaces and activities for children in various contexts."
+  ],
+  "techExperience": [],
+  "teckSkills": [],
+  "work": [
+    {
+      "title": "Creative Learning Consultant (2014 - present)",
+      "details": "JavaScript & React online program / Re:Coded Istanbul Bootcamp."
+    },
+    {
+      "title": "Front-End Web Development Program, Flatiron School (2020)",
+      "details": "JavaScript & React online program / Re:Coded Istanbul Bootcamp."
+    }
+  ],
+  "education": [
+    {
+      "title": "Front-End Web Development Program, Flatiron School (2020)",
+      "details": "JavaScript & React online program / Re:Coded Istanbul Bootcamp."
+    },
+    {
+      "title": "SM in Media Arts & Sciences, MIT (2014)",
+      "details": "The Lifelong Kindergarten research group, developing new technologies and activities that engage people in creative learning experiences."
+    },
+    {
+      "title": "BS in Computer Engineering, Damascus University (2009)",
+      "details": ""
+    }
+  ]
+}
