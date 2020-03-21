@@ -1,3 +1,18 @@
+
+## Credits:
+* ### Inspiration:
+  - Intro: https://codepen.io/Coding_Journey/pen/BEMgbX
+  - Homepage: https://buzzworthystudio.com/
+* ### Photos:
+  - Bio: https://unsplash.com/photos/TamMbr4okv4
+  - Resume: https://unsplash.com/photos/GI1hwOGqGtE
+  - Portfolio: https://unsplash.com/photos/aDCxNcM7cic
+  - Contact: https://unsplash.com/photos/71CjSSB83Wo
+
+![Screenshot of Intro](./src/media/screenshot-1.png)
+![Screenshot of Homepage](./src/media/screenshot-2.png)
+![Screenshot of Bio](./src/media/screenshot-3.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
