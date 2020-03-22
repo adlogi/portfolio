@@ -1,3 +1,11 @@
+This project is my portfolio website as a front-end developer.
+
+Live link: [https://adlogi.github.io/portfolio/](https://adlogi.github.io/portfolio/) (NOT deployed yet!)
+Demo video: [https://youtu.be/LOyYI3KK6cs](https://youtu.be/LOyYI3KK6cs)
+
+![Screenshot of Intro](./src/media/screenshot-1.png)
+![Screenshot of Homepage](./src/media/screenshot-2.png)
+![Screenshot of Bio](./src/media/screenshot-3.png)
 
 ## Credits:
 * ### Inspiration:
@@ -9,9 +17,7 @@
   - Portfolio: https://unsplash.com/photos/aDCxNcM7cic
   - Contact: https://unsplash.com/photos/71CjSSB83Wo
 
-![Screenshot of Intro](./src/media/screenshot-1.png)
-![Screenshot of Homepage](./src/media/screenshot-2.png)
-![Screenshot of Bio](./src/media/screenshot-3.png)
+---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
