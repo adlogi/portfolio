@@ -24,8 +24,8 @@ export default class Contact extends Component {
             <div className="row align-items-center h-100">
               <div className="col section-link icons px-1 px-sm-5">
                 <div className="row">
-                  {this.contact.map(mean => (
-                    <div className="my-4 col-6 col-sm-3 text-center">
+                  {this.contact.map((mean, index) => (
+                    <div key={index} className="my-4 col-6 col-sm-3 text-center">
                       <a href={mean.link} target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={this.icons[mean.name]} />
                       </a>
