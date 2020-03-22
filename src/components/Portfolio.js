@@ -29,7 +29,7 @@ export default class Portfolio extends Component {
                         <h3>movieXplorer</h3>
                         <p className="icons">
                           <a href="https://github.com/adlogi/movieXplorer" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a>{' '}
-                          <a href="./portfolio" rel="noopener noreferrer"><FontAwesomeIcon icon={faLink} /></a>
+                          <a href="https://adlogi.github.io/movieXplorer/" rel="noopener noreferrer"><FontAwesomeIcon icon={faLink} /></a>
                         </p>
                     </Carousel.Caption>
                   </Carousel.Item>
