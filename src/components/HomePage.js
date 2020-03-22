@@ -12,11 +12,11 @@ export default class HomePage extends Component {
       <div className="container-fluid fade-in">
         <div className="row h-100">
           <div className="col-md-4 col-lg-3 align-self-center">
-            <h1 className="short-name text-center mt-5 mt-md-0">
+            <h1 className="short-name text-center">
             <Link to='./'>A<span className="colored">.</span>Y<span className="colored">.</span>idlbi<span className="smile colored">)</span></Link>
             </h1>
           </div>
-          <div className="col-md-8 col-lg-9 flex-grow-1 mt-5 mt-md-0">
+          <div className="col-md-8 col-lg-9 flex-grow-1">
             <div className="row align-items-center h-100">
               <div className="col-12 side-drop-color h-100"></div>
               <div className="col-12 side-drop-image h-100"></div>

@@ -44,8 +44,7 @@ export default class Resume extends Component {
           <SideMenu selected='resume' />
           <div className="offset-md-4 col-md-8 offset-lg-3 col-lg-9 flex-grow-1 my-5">
             <div className="row align-items-center h-100">
-              <div className="col px-5">
-
+              <div className="col px-1 px-md-2 px-lg-5">
                 <Accordion defaultActiveKey="0">
                   <Card>
                     <Accordion.Toggle as={Card.Header} eventKey="0" onClick={this.handleToggle}>
@@ -76,12 +75,12 @@ export default class Resume extends Component {
                                 <a href={project.links.github} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a>
                               </small>
                             </h4>
-                            <p className="pl-3 mb-0 mt-2">
+                            <p className="pl-2 pl-sm-3 mb-0 mt-2">
                               {project.description}
                             </p>
                             <ul className="list-unstyled">
                               {project.details.map((detail, index) => 
-                                  <li key={index} className="pl-5 my-1">{detail}</li>
+                                  <li key={index} className="pl-4 pl-sm-5 my-1 inner">{detail}</li>
                               )}
                             </ul>
                           </div>
@@ -97,7 +96,7 @@ export default class Resume extends Component {
                     <Accordion.Collapse eventKey="2">
                       <Card.Body>
                         {this.resume.skills.map((skill, index) =>
-                          <p className="pl-3 mb-0 mt-2">{skill}</p>
+                          <p key={index} className="pl-2 pl-sm-3 mb-0 mt-2">{skill}</p>
                         )}
                       </Card.Body>
                     </Accordion.Collapse>
@@ -117,13 +116,13 @@ export default class Resume extends Component {
                             </h4>
                             {job.positions.map((position, index) => { return (
                               <div key={index}>
-                                <p className="pl-3 mb-0 mt-2 d-flex justify-content-between">
+                                <p className="pl-2 pl-sm-3 mb-0 mt-2 d-flex justify-content-between">
                                   {position.title}
                                   <small className="text-muted smaller text-nowrap">{position.dates}</small>
                                 </p>
                                 <ul className="list-unstyled">
                                   {position.details.map((detail, index) => 
-                                      <li key={index} className="pl-5 my-1">{detail}</li>
+                                      <li key={index} className="pl-4 pl-sm-5 my-1 inner">{detail}</li>
                                   )}
                                 </ul>
                               </div>
@@ -145,7 +144,7 @@ export default class Resume extends Component {
                             <p className="mb-0">{degree.title}</p>
                             <ul className="list-unstyled">
                               {degree.details.map((detail, index) =>
-                                <li key={index} className="pl-5 my-1">{detail}</li>
+                                <li key={index} className="pl-4 pl-sm-5 my-1 inner">{detail}</li>
                               )}
                             </ul>
                           </div>

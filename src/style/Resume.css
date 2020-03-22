@@ -38,7 +38,7 @@
   transition: transform .2s linear;
 }
 
-li.pl-5::before {
+li.inner::before {
   content: '- ';
 }
 
