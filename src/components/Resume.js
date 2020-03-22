@@ -4,7 +4,8 @@ import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import '../style/Resume.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronCircleRight as chevronIcon} from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLink, faChevronCircleRight as chevronIcon } from '@fortawesome/free-solid-svg-icons';
 // import { faAngleDoubleRight as chevronIcon} from '@fortawesome/free-solid-svg-icons';
 
 export default class Resume extends Component {
@@ -65,7 +66,27 @@ export default class Resume extends Component {
                       <span><FontAwesomeIcon icon={chevronIcon} /></span>
                     </Accordion.Toggle>
                     <Accordion.Collapse eventKey="1">
-                      <Card.Body>Hello! I'm another body</Card.Body>
+                      <Card.Body>
+                        {this.resume.experience.map((project, index) => (
+                          <div key={index} className="mb-3">
+                            <h4 className="mb-0 pb-1 border-bottom d-flex justify-content-between">
+                              {project.title}
+                              <small className="text-muted icons smaller">
+                                <a href={project.links.live} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLink} /></a>{' '}
+                                <a href={project.links.github} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a>
+                              </small>
+                            </h4>
+                            <p className="pl-3 mb-0 mt-2">
+                              {project.description}
+                            </p>
+                            <ul className="list-unstyled">
+                              {project.details.map((detail, index) => 
+                                  <li key={index} className="pl-5 my-1">{detail}</li>
+                              )}
+                            </ul>
+                          </div>
+                        ))}
+                      </Card.Body>
                     </Accordion.Collapse>
                   </Card>
                   <Card>
@@ -75,11 +96,9 @@ export default class Resume extends Component {
                     </Accordion.Toggle>
                     <Accordion.Collapse eventKey="2">
                       <Card.Body>
-                        <ul className="list-unstyled">
-                          {this.resume.skills.map((skill, index) => 
-                              <li key={index} className="pl-5 my-1">{skill}</li>
-                          )}
-                        </ul>
+                        {this.resume.skills.map((skill, index) =>
+                          <p className="pl-3 mb-0 mt-2">{skill}</p>
+                        )}
                       </Card.Body>
                     </Accordion.Collapse>
                   </Card>

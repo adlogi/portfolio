@@ -7,9 +7,10 @@
     {
       "title": "Scratch",
       "links": {
-        "live": "",
+        "live": "https://scratch.mit.edu/",
         "github": ""
       },
+      "description": "Scratch is a programming language and online community for children.",
       "details": [
         "",
         "",
