@@ -3,9 +3,9 @@ This project is my portfolio website as a front-end developer.
 Live link: [https://adlogi.github.io/](https://adlogi.github.io/)
 Demo video: [https://youtu.be/LOyYI3KK6cs](https://youtu.be/LOyYI3KK6cs)
 
-![Screenshot of Intro](./src/media/screenshot-1.png)
-![Screenshot of Homepage](./src/media/screenshot-2.png)
-![Screenshot of Bio](./src/media/screenshot-3.png)
+![Screenshot of Intro](./src/media/screenshot-1.jpg)
+![Screenshot of Homepage](./src/media/screenshot-2.jpg)
+![Screenshot of Bio](./src/media/screenshot-3.jpg)
 
 ## Credits:
 * ### Inspiration:
