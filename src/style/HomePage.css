@@ -46,6 +46,10 @@ html {
   letter-spacing: 0.1rem;
 }
 
+.section-link.icons{
+  font-size: 4rem;
+}
+
 .section-link span {
   display: inline-flex;
   align-items: center;
@@ -74,13 +78,15 @@ html {
 }
 
 @media (min-width: 768px) {
-  .section-link {
+  .section-link,
+  .section-link.icons {
     font-size: 5rem;
   }
 }
 
 @media (min-width: 992px) {
-  .section-link {
+  .section-link,
+  .section-link.icons {
     font-size: 6rem;
   }
 }
