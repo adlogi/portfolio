@@ -1,6 +1,6 @@
 This project is my portfolio website as a front-end developer.
 
-Live link: [https://adlogi.github.io/portfolio/](https://adlogi.github.io/portfolio/) (NOT deployed yet!)
+Live link: [https://adlogi.github.io/](https://adlogi.github.io/)
 Demo video: [https://youtu.be/LOyYI3KK6cs](https://youtu.be/LOyYI3KK6cs)
 
 ![Screenshot of Intro](./src/media/screenshot-1.png)
@@ -9,13 +9,13 @@ Demo video: [https://youtu.be/LOyYI3KK6cs](https://youtu.be/LOyYI3KK6cs)
 
 ## Credits:
 * ### Inspiration:
-  - Intro: https://codepen.io/Coding_Journey/pen/BEMgbX
-  - Homepage: https://buzzworthystudio.com/
+  - Intro: [https://codepen.io/Coding_Journey/pen/BEMgbX](https://codepen.io/Coding_Journey/pen/BEMgbX)
+  - Homepage: [https://buzzworthystudio.com/](https://buzzworthystudio.com/)
 * ### Photos:
-  - Bio: https://unsplash.com/photos/TamMbr4okv4
-  - Resume: https://unsplash.com/photos/GI1hwOGqGtE
-  - Portfolio: https://unsplash.com/photos/aDCxNcM7cic
-  - Contact: https://unsplash.com/photos/71CjSSB83Wo
+  - Bio: [https://unsplash.com/photos/TamMbr4okv4](https://unsplash.com/photos/TamMbr4okv4)
+  - Resume: [https://unsplash.com/photos/GI1hwOGqGtE](https://unsplash.com/photos/GI1hwOGqGtE)
+  - Portfolio: [https://unsplash.com/photos/aDCxNcM7cic](https://unsplash.com/photos/aDCxNcM7cic)
+  - Contact: [https://unsplash.com/photos/71CjSSB83Wo](https://unsplash.com/photos/71CjSSB83Wo)
 
 ---
 
