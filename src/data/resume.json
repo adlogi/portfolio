@@ -5,16 +5,50 @@
   ],
   "experience": [
     {
+      "title": "A.Y.idlbi",
+      "links": {
+        "live": "https://adlogi.github.io/",
+        "github": "https://github.com/adlogi/adlogi.github.io"
+      },
+      "description": "An online portfloio to share my experience as a front-end developer.",
+      "details": [
+        "Used React with routes to build multi-page website showing different aspects of the work.",
+        "Utilized Bootstrap for responsive styling.",
+        "Animated intro page using JavaScript and CSS."
+      ]
+    },
+    {
+      "title": "moviExplorer",
+      "links": {
+        "live": "https://adlogi.github.io/movieXplorer/",
+        "github": "https://github.com/adlogi/movieXplorer"
+      },
+      "description": "A single-page website to search for movies and show information extracted from The Movie Database (TMDb).",
+      "details": [
+        "Used React to search, fetch, and show lists of movies based on search keywords.",
+        "Utilized Bootstrap for styling."
+      ]
+    },
+    {
+      "title": "Minesweeper",
+      "links": {
+        "live": "https://adlogi.github.io/minesweeper/",
+        "github": "https://github.com/adlogi/minesweeper"
+      },
+      "description": "An imitation of Google Play's instant Minesweeper game",
+      "details": [
+        "Used vanilla JavaScript and CSS to build the game."
+      ]
+    },
+    {
       "title": "Scratch",
       "links": {
         "live": "https://scratch.mit.edu/",
-        "github": ""
+        "github": "https://github.com/LLK/"
       },
-      "description": "Scratch is a programming language and online community for children.",
+      "description": "Scratch is a programming language and online community that allows children to program thier own interactive stories, games, and animations — and share their creations online.",
       "details": [
-        "",
-        "",
-        ""
+        "Used python to create scripts to migrate translations from the old version (Scratch 1.4) to the new one"
       ]
     }
   ],
@@ -36,8 +70,8 @@
           "dates": "2012 - present",
           "details": [
             "Providing consultation on the design of creative learning experiences and educational technologies, with a special experience in working with disadvantaged and refugee communities. Projects include:",
-            "Designing and running Salam Culture and Science Center at Al Salam School in Reyhanli/Hatay and providing continuous follow up with the mentors. SCSC provides after-school activities for refugee children (6-12 y/o) where they can explore various topics in the fields of language, art, science, engineering, and even computer programming, in a meaningful context.",
-            "Leading the design and operation of Karam House (karamhouse.org), a community innovation makerspace for Syrian refugee teens where they create projects related to their interests while collaborating with their peers and mentors. Responsibilities included setting up Karam House, planning the learning activities, and hiring, training, and evaluating the mentors."
+            "Designed and ran Salam Culture and Science Center at Al Salam School in Reyhanli/Hatay and provided continuous follow up with the mentors. SCSC provides after-school activities for refugee children (6-12 y/o) where they can explore various topics in the fields of language, art, science, engineering, and even computer programming, in a meaningful context.",
+            "Led the design and operation of Karam House (karamhouse.org), a community innovation makerspace for Syrian refugee teens where they create projects related to their interests while collaborating with their peers and mentors. Responsibilities included setting up Karam House, planning the learning activities, and hiring, training, and evaluating the mentors."
           ]
         }
       ]
@@ -50,16 +84,17 @@
           "title": "Reasearch Assistant",
           "dates": "2012 - 2014",
           "details": [
-            "Working with the Lifelong Kindergarten research group on designing technologies and activities to engage people in creative learning experiences.",
-            "Designing creative learning activities that empower young displaced people in Northern Syria to meet their educational and psychological needs."
+            "Worked with the Lifelong Kindergarten research group on designing technologies and activities to engage people in creative learning experiences.",
+            "Designed creative learning activities that empower young displaced people in Northern Syria to meet their educational and psychological needs."
           ]
         },
         {
           "title": "Member of the MIT Scratch Team",
           "dates": "2012 - 2014",
           "details": [
-            "Leading the internationalization of Scratch, coordinating the efforts of an international group of volunteering translators who provided Scratch translations for more than 40 languages.",
-            "Helping with connecting Scratch to hardware devices (with focus on Arduino), and exploring how people with diverse backgrounds and interests can build their own customized virtual-physical interactions."
+            "Led the internationalization of Scratch, coordinating the efforts of an international group of volunteering translators who provided translations of Scratch 2.0 editor and website to more than 40 languages.",
+            "Helped with connecting Scratch to hardware devices (with focus on Arduino), and exploring how people with diverse backgrounds and interests can build their own customized virtual-physical interactions.",
+            "Published work: Dasgupta, S., Clements, S. M., idlbi, A. Y., Willis-Ford, C., and Resnick, M. (2015). \"Extending Scratch: New Pathways into Programming.\" Proceedings of IEEE Symposium on Visual Languages and Human-Centric Computing (VLHCC ’15)."
           ]
         }
       ]
@@ -72,10 +107,10 @@
           "title": "Head of Learning",
           "dates": "2011 - 2012",
           "details": [
-            "Developing the content and learning journeys for the various interactive learning programs that TalentS provides, and training new trainers and facilitators. Projects include:",
-            "Managing a collaboration with the Exploratorium museum of science to bring the Tinkering Studio, an immersive experience that allows participants to engage in investigations of scientific phenomena and make meanigful artifacts.",
-            "Training judges and organizers of the local FLL (FIRST LEGO League) robotics competition for youth.",
-            "Training teacher-trainers for the Siemens Discovery Box project, an initiative to introduce inquiry-based learning activities in electricity and environment to early science classroom all over the country."
+            "Developed the content and learning journeys for the various interactive learning programs that TalentS provides, and trained new trainers and facilitators. Projects include:",
+            "Managed a collaboration with the Exploratorium museum of science to bring the Tinkering Studio, an immersive experience that allows participants to engage in investigations of scientific phenomena and make meanigful artifacts.",
+            "Trained judges and organizers of the local FLL (FIRST LEGO League) robotics competition for youth.",
+            "Trained teacher-trainers for the Siemens Discovery Box project, an initiative to introduce inquiry-based learning activities in electricity and environment to early science classroom all over the country."
           ]
         }
       ]
@@ -88,7 +123,7 @@
           "title": "Scientific Coordinator of the Syrian Olympiad in Informatics",
           "dates": "2005 - 2009",
           "details": [
-            "Taking part in creating the content for and organizing SOI, the national version of the International Olympiad in Informatics, and providing training and advising on teaching computer programming and algorithms for youth.",
+            "Took part in creating the content for and organizing SOI, the national version of the International Olympiad in Informatics, and trained and advised on teaching computer programming and algorithms for youth.",
             "Leader of the Syrian delegation participating in the International Olympiad in Informatics for IOI 2007 and IOI 2009."
           ]
         }
