@@ -1,0 +1,17 @@
+[
+  {
+    "name": "movieXplorer",
+    "live": "https://adlogi.github.io/movieXplorer/",
+    "github": "https://github.com/adlogi/movieXplorer"
+  },
+  {
+    "name": "Minesweeper",
+    "live": "https://adlogi.github.io/minesweeper/",
+    "github": "https://github.com/adlogi/minesweeper"
+  },
+  {
+    "name": "Abbuloka",
+    "live": "https://abbuloka.netlify.com/",
+    "github": "https://github.com/bsurmen/abbulokapremium"
+  }
+]
