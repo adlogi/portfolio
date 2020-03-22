@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
 import SideMenu from './SideMenu';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedinIn, faTwitter, faMedium } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faTwitter, faMediumM, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 export default class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.contact = require('../data/contact.json');
+    this.icons = {
+      github: faGithub,
+      linkedin: faLinkedinIn,
+      twitter: faTwitter,
+      medium: faMediumM,
+    }
+  }
+
   render() {
     return (
       <div className="container-fluid fade-in">
@@ -13,10 +24,13 @@ export default class Contact extends Component {
             <div className="row align-items-center h-100">
               <div className="col section-link icons px-1 px-sm-5">
                 <div className="row">
-                  <div className="my-4 col-6 col-sm-3 text-center"><a href="https://github.com/adlogi" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a></div>
-                  <div className="my-4 col-6 col-sm-3 text-center"><a href="https://www.linkedin.com/in/adlogi/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedinIn} /></a></div>
-                  <div className="my-4 col-6 col-sm-3 text-center"><a href="https://twitter.com/adlogi" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} /></a></div>
-                  <div className="my-4 col-6 col-sm-3 text-center"><a href="https://medium.com/@adlogi" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faMedium} /></a></div>
+                  {this.contact.map(mean => (
+                    <div className="my-4 col-6 col-sm-3 text-center">
+                      <a href={mean.link} target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={this.icons[mean.name]} />
+                      </a>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
