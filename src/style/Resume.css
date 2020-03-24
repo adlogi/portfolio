@@ -48,12 +48,29 @@ li.inner::before {
 
 small.icons a:link, 
 small.icons a:visited,
-small.icons a:active {
+small.icons a:active,
+.download-btn a:link,
+.download-btn a:visited,
+.download-btn a:active {
   color: #ccc;
   text-decoration: none;
 }
 
-small.icons a:hover {
+small.icons a:hover,
+.download-btn a:hover {
   color: #dd7732;
   text-decoration: none;
+}
+
+.accordion > .card:last-child > .card-header {
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: 0.1rem;
+  justify-content: center !important;
+  height: 4rem;
+}
+
+.accordion > .card:last-child span {
+  display: inline-block;
+  margin: auto;
 }

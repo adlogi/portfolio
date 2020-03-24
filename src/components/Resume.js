@@ -5,7 +5,8 @@ import Card from 'react-bootstrap/Card';
 import '../style/Resume.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faLink, faChevronCircleRight as chevronIcon } from '@fortawesome/free-solid-svg-icons';
+import { faLink, faChevronCircleRight as chevronIcon, faFileDownload } from '@fortawesome/free-solid-svg-icons';
+import resumePdf from '../media/idlbi-resume.pdf';
 // import { faAngleDoubleRight as chevronIcon} from '@fortawesome/free-solid-svg-icons';
 
 export default class Resume extends Component {
@@ -28,12 +29,20 @@ export default class Resume extends Component {
     if (cardHeader.nodeName === 'SPAN') {
       cardHeader = cardHeader.parentNode;
     }
-    const isShown = cardHeader.classList.contains('show-header');
-    this.clearHeaders();
-    if (isShown) {
-      cardHeader.classList.remove('show-header');
+    if (cardHeader.querySelector('#download')) {
+      this.clearHeaders();
+      const link = document.createElement('a');
+      link.href = resumePdf;
+      link.download = 'idlbi-resume.pdf';
+      link.dispatchEvent(new MouseEvent('click'));
     } else {
-      cardHeader.classList.add('show-header');
+      const isShown = cardHeader.classList.contains('show-header');
+      this.clearHeaders();
+      if (isShown) {
+        cardHeader.classList.remove('show-header');
+      } else {
+        cardHeader.classList.add('show-header');
+      }
     }
   }
 
@@ -151,6 +160,11 @@ export default class Resume extends Component {
                         ))}
                       </Card.Body>
                     </Accordion.Collapse>
+                  </Card>
+                  <Card>
+                    <Accordion.Toggle as={Card.Header} onClick={this.handleToggle} >
+                      <span id="download"><FontAwesomeIcon icon={faFileDownload} /> Download (PDF)</span>
+                    </Accordion.Toggle>
                   </Card>
                 </Accordion>
               </div>
