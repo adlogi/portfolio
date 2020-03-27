@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import emailjs from 'emailjs-com';
 import SideMenu from './SideMenu';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
@@ -20,11 +21,16 @@ export default class Contact extends Component {
     }
     this.state = {
       modalShow: false,
+      mailResult: null,
     }
   }
 
   setModalShow = (modalState) => {
     this.setState({modalShow: modalState});
+  }
+
+  setMailResult = (modalState) => {
+    this.setState({mailResult: modalState});
   }
 
   render() {
@@ -51,6 +57,11 @@ export default class Contact extends Component {
                   <ContactModal
                     show={this.state.modalShow}
                     onHide={() => this.setModalShow(false)}
+                    onMailSent={this.setMailResult}
+                  />
+                  <MailResult
+                    show={this.state.mailResult}
+                    onHide={() => this.setMailResult(null)}
                   />
                 </div>
               </div>
@@ -65,9 +76,6 @@ export default class Contact extends Component {
 function ContactModal(props) {
   const handleFocus = (e) => {
     const input = e.target;
-    console.log(input)
-    console.log(input.id)
-    console.log(`#label-${input.id.slice(6)}`)
     const label = document.querySelector(`#label-${input.id.slice(6)}`);
     label.classList.add('active');
   }
@@ -82,9 +90,33 @@ function ContactModal(props) {
       label.classList.remove('filled');
     }
   }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.onHide();
+    props.onMailSent('sending');
+    const form = e.target;
+    const messageParams = {
+      senderName: form.elements[0].value,
+      senderEmail: form.elements[1].value,
+      subject: form.elements[2].value,
+      message: form.elements[3].value,
+    }
+    emailjs.send('default_service', 'ayidlbi_contact', messageParams, 'user_QBsjyXi4xAWR0CqA2zFnZ')
+      .then(function (response) {
+        // console.log('SUCCESS!', response.status, response.text);
+        props.onMailSent('success');
+      }, function (error) {
+        // console.log('FAILED...', error);
+        props.onMailSent('failure');
+      });
+  }
+
+  let modalProps = Object.assign({}, props);
+  delete modalProps.onMailSent;
   return (
     <Modal
-      {...props}
+      {...modalProps}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
@@ -97,7 +129,7 @@ function ContactModal(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-      <Form id="contact-form">
+      <Form id="contact-form" autoComplete="off" onSubmit={handleSubmit}>
         <Form.Group controlId="input-name">
           <Form.Label id="label-name">Name</Form.Label>
           <Form.Control type="text" required onFocus={handleFocus} onBlur={handleBlur} />
@@ -116,9 +148,44 @@ function ContactModal(props) {
         </Form.Group>
       </Form>
       </Modal.Body>
-      <Modal.Footer>
-        <Button type="submit" form="contact-form"><FontAwesomeIcon icon={faPaperPlane} /> Send</Button>
+      <Modal.Footer className="p-0">
+        <Button type="submit" form="contact-form" block className="m-0 p-3"><FontAwesomeIcon icon={faPaperPlane} /> Send</Button>
       </Modal.Footer>
     </Modal>
-  );
+  );  
+}
+
+function MailResult(props) {
+  if (props.show) {
+    return (
+      <Modal
+        show={true}
+        onHide={props.onHide}
+        centered
+        className="result-modal"
+      >
+        <Modal.Header>
+          <Modal.Title id="contained-modal-title-vcenter" className="col d-flex justify-content-between">
+            <span>
+              {props.show === 'sending'
+                ? 'Sending...'
+                : props.show === 'success'
+                ? 'Your Message Has Been Sent!'
+                : 'Sending Error!'}
+              </span>
+            <span onClick={props.onHide} className="clickable"><FontAwesomeIcon icon={faTimes} /></span>
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Footer>
+            {props.show === 'sending'
+              ? ""
+              : props.show === 'success'
+              ? "Thanks for reaching out. I'll get back to you soon."
+              : "Sorry for the inconveniece. Please try one of the other options to reach out."}
+        </Modal.Footer>
+      </Modal>
+    );
+  } else {
+    return null;
+  }
 }

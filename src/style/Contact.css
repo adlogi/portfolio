@@ -13,12 +13,33 @@
   border: 1px #dd7732 solid;
 }
 
-.contact-modal .modal-body {
+.result-modal .modal-content {
+  background-color: transparent;
+}
+
+.result-modal .modal-header,
+.result-modal .modal-body,
+.result-modal .modal-footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px #dd7732 solid;
+}
+
+.modal-body {
   border-top: hidden;
   border-bottom: hidden;
 }
 
-.contact-modal .modal-header button > span {
+.result-modal .modal-header {
+  border-bottom: none;
+}
+.result-modal .modal-footer {
+  border-top: hidden;
+  justify-content: left;
+  padding-left: 2rem;
+  /* font-size: 90%; */
+}
+
+.modal-header button > span {
   color: #dd7732;
 }
 
@@ -39,7 +60,6 @@
   background-color: black !important;
   border: none !important;
   box-shadow: none !important;
-
 }
 
 .contact-modal .modal-footer {
@@ -63,6 +83,7 @@
   padding: 0 3px;
   background: none;
   color: #6C757D;
+  transition: all .1s ease-in-out;
 }
 
 .form-group>label.active{
@@ -73,6 +94,7 @@
   padding: 0 3px;
   background: black;
   color: #dd7732;
+  transition: all .1s ease-in-out;
 }
 
 .form-group>label.filled{
@@ -83,6 +105,7 @@
   padding: 0 3px;
   background: black;
   color: #6C757D;
+  transition: all .1s ease-in-out;
 }
 
 .form-group>input,
@@ -103,6 +126,10 @@
     width: 100%;
     max-width: 90%;
   }
+  .result-modal .modal-content {
+    width: 100%;
+    max-width: 90%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -112,10 +139,22 @@
     max-width: 60%;
     right: 3.5%;
   }
+  .result-modal .modal-content {
+    position: fixed;
+    width: 100%;
+    max-width: 60%;
+    right: 3.5%;
+  }
 }
 
 @media (min-width: 992px) {
   .contact-modal .modal-dialog {
+    position: fixed;
+    width: 100%;
+    max-width: 65%;
+    right: 5%;
+  }
+  .result-modal .modal-content {
     position: fixed;
     width: 100%;
     max-width: 65%;
