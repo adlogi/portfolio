@@ -1,0 +1,128 @@
+.section-link.icons span {
+  cursor: pointer;
+}
+
+.section-link.icons span:hover {
+  color: #dd7732;
+}
+
+.contact-modal .modal-header,
+.contact-modal .modal-body,
+.contact-modal .modal-footer {
+  background-color: black;
+  border: 1px #dd7732 solid;
+}
+
+.contact-modal .modal-body {
+  border-top: hidden;
+  border-bottom: hidden;
+}
+
+.contact-modal .modal-header button > span {
+  color: #dd7732;
+}
+
+.contact-modal textarea {
+  resize: none;
+}
+
+.contact-modal button {
+  color: #ccc;
+  background-color: black;
+  border: none;
+}
+
+.contact-modal button:hover,
+.contact-modal button:focus,
+.contact-modal button:active {
+  color: #dd7732 !important;
+  background-color: black !important;
+  border: none !important;
+  box-shadow: none !important;
+
+}
+
+.contact-modal .modal-footer {
+  justify-content: center;
+}
+
+.clickable:hover,
+.clickable:active {
+  color: #dd7732;
+  cursor: pointer;
+}
+
+.form-group{
+  position: relative;
+}
+
+.form-group>label {
+  position:absolute;
+  top: .45rem;
+  left: 0.6rem;
+  padding: 0 3px;
+  background: none;
+  color: #6C757D;
+}
+
+.form-group>label.active{
+  position:absolute;
+  font-size: 90%;
+  top: -0.8rem;
+  left: 0.6rem;
+  padding: 0 3px;
+  background: black;
+  color: #dd7732;
+}
+
+.form-group>label.filled{
+  position:absolute;
+  font-size: 90%;
+  top: -0.8rem;
+  left: 0.6rem;
+  padding: 0 3px;
+  background: black;
+  color: #6C757D;
+}
+
+.form-group>input,
+.form-group>textarea {
+  background-color: black !important;
+  color: #ccc !important;
+}
+.form-group>input:active,
+.form-group>input:focus,
+.form-group>textarea:active,
+.form-group>textarea:focus {
+  border-color: #dd7732 !important;
+  box-shadow: #dd7732 0 0 3px 1px !important;
+}
+
+@media (min-width: 576px) {
+  .contact-modal .modal-dialog {
+    width: 100%;
+    max-width: 90%;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-modal .modal-dialog {
+    position: fixed;
+    width: 100%;
+    max-width: 60%;
+    right: 3.5%;
+  }
+}
+
+@media (min-width: 992px) {
+  .contact-modal .modal-dialog {
+    position: fixed;
+    width: 100%;
+    max-width: 65%;
+    right: 5%;
+  }
+}
+
+@media (min-width: 1200px) {
+  
+}
