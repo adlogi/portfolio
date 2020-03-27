@@ -47,7 +47,7 @@ html {
 }
 
 .section-link.icons{
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .section-link span {
@@ -72,7 +72,8 @@ html {
 }
 
 @media (min-width: 576px) {
-  .section-link {
+  .section-link,
+  .section-link.icons {
     font-size: 4rem;
   }
 }
