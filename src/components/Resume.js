@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLink, faChevronCircleRight as chevronIcon, faFileDownload } from '@fortawesome/free-solid-svg-icons';
 import resumePdf from '../media/idlbi-resume.pdf';
-// import { faAngleDoubleRight as chevronIcon} from '@fortawesome/free-solid-svg-icons';
 
 export default class Resume extends Component {
   constructor(props) {
