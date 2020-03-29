@@ -5,6 +5,7 @@ import bio from '../media/bio.jpg';
 import resume from '../media/resume.jpg';
 import portfolio from '../media/portfolio.jpg';
 import contact from '../media/contact.jpg';
+import notFound from '../media/404.jpg';
 export default class SideMenu extends Component {
   render() {
     const links = ['bio', 'resume', 'portfolio', 'contact'];
@@ -39,7 +40,8 @@ export default class SideMenu extends Component {
       'bio': bio,
       'resume': resume,
       'portfolio': portfolio,
-      'contact': contact
+      'contact': contact,
+      '404': notFound,
     }
     const SideMenuContainer = document.querySelector('#side-menu-container')
     SideMenuContainer.style.setProperty('--menu-background-source', `url(${bgImages[this.props.selected]})`);

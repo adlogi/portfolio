@@ -21,6 +21,7 @@ Demo video: [https://youtu.be/LOyYI3KK6cs](https://youtu.be/LOyYI3KK6cs)
   - Resume: [https://unsplash.com/photos/GI1hwOGqGtE](https://unsplash.com/photos/GI1hwOGqGtE)
   - Portfolio: [https://unsplash.com/photos/aDCxNcM7cic](https://unsplash.com/photos/aDCxNcM7cic)
   - Contact: [https://unsplash.com/photos/71CjSSB83Wo](https://unsplash.com/photos/71CjSSB83Wo)
+  - 404: [https://unsplash.com/photos/NXt5PrOb_7U](https://unsplash.com/photos/NXt5PrOb_7U)
 
 ---
 
