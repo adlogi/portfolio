@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 import '../style/Contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faTwitter, faMediumM, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faGitlab, faTwitter, faMediumM, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 export default class Contact extends Component {
   constructor(props) {
@@ -15,6 +15,7 @@ export default class Contact extends Component {
     this.contact = require('../data/contact.json');
     this.icons = {
       github: faGithub,
+      gitlab: faGitlab,
       linkedin: faLinkedinIn,
       twitter: faTwitter,
       medium: faMediumM,
@@ -48,7 +49,7 @@ export default class Contact extends Component {
                     </span>
                   </div>
                   {this.contact.map((mean, index) => (
-                    <div key={index} className="p-0 my-4 col-3 text-center">
+                    <div key={index} className="p-0 my-4 col text-center">
                       <a href={mean.link} target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={this.icons[mean.name]} />
                       </a>
