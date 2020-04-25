@@ -4,7 +4,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import '../style/Resume.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faGitlab } from '@fortawesome/free-brands-svg-icons';
 import { faLink, faChevronCircleRight as chevronIcon, faFileDownload } from '@fortawesome/free-solid-svg-icons';
 import resumePdf from '../media/idlbi-resume.pdf';
 
@@ -80,7 +80,8 @@ export default class Resume extends Component {
                               {project.title}
                               <small className="text-muted icons smaller">
                                 <a href={project.links.live} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLink} /></a>{' '}
-                                <a href={project.links.github} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a>
+                                {('github' in project.links) ? (<a href={project.links.github} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a>) : null}
+                                {('gitlab' in project.links) ? (<a href={project.links.gitlab} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGitlab} /></a>) : null}
                               </small>
                             </h4>
                             <p className="pl-2 pl-sm-3 mb-0 mt-2">
