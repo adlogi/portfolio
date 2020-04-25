@@ -52,7 +52,7 @@ export default class Resume extends Component {
           <SideMenu selected='resume' />
           <div className="offset-md-4 col-md-8 offset-lg-3 col-lg-9 flex-grow-1 my-5">
             <div className="row align-items-center h-100">
-              <div className="col px-1 px-md-2 px-lg-5">
+              <div className="col m-auto px-1 px-md-2 px-lg-5">
                 <Accordion defaultActiveKey="0">
                   <Card>
                     <Accordion.Toggle as={Card.Header} eventKey="0" onClick={this.handleToggle}>
