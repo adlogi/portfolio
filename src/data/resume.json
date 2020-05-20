@@ -7,15 +7,14 @@
     {
       "title": "The REACH Project (Columbia University)",
       "links": {
-        "live": "https://blissful-babbage-5a512e.netlify.com/",
+        "live": "https://col-reach.netlify.app/",
         "gitlab": "https://gitlab.com/istanbulclientprojectsApr2020/columbia-university-reach"
       },
       "description": "A multilingual website for an app that provides refugees in Turkey and Lebanon with access to health literacy and health care information.",
       "details": [
-        "Worked with a team, using React with routes, to build a multi-page website providing information about the app.",
+        "Worked with a team, using React with routes, to build a website that provides information about the app.",
         "Utilized Bootstrap for responsive styling.",
-        "Added multi-language support and created costume RTL styling.",
-        "Used Wordpress with REST API as a CMS to add dynamic content."
+        "Added multi-language support and created costume RTL styling."
       ]
     },
     {

@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import SideMenu from './SideMenu';
 import Carousel from 'react-bootstrap/Carousel';
 import '../style/Portfolio.css';
+import reach from '../media/reach.jpg';
 import moviexplorer from '../media/moviexplorer.jpg';
 import minesweeper from '../media/minesweeper.jpg';
 import abbuloka from '../media/abbuloka.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faGitlab } from '@fortawesome/free-brands-svg-icons';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 
 export default class Portfolio extends Component {
@@ -14,6 +15,7 @@ export default class Portfolio extends Component {
     super(props);
     this.portfolio = require('../data/portfolio.json');
     this.images = {
+      'REACH Project': reach,
       'movieXplorer': moviexplorer,
       'Minesweeper': minesweeper,
       'Abbuloka': abbuloka,
@@ -39,7 +41,8 @@ export default class Portfolio extends Component {
                         <h3>{project.name}</h3>
                         <p className="icons">
                           <a href={project.live} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLink} /></a>{' '}
-                          <a href={project.github} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a>
+                          {('github' in project) ? (<a href={project.github} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a>) : null}
+                          {('gitlab' in project) ? (<a href={project.gitlab} target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGitlab} /></a>) : null}
                         </p>
                       </Carousel.Caption>
                     </Carousel.Item>

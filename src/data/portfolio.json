@@ -1,5 +1,9 @@
 [
   {
+    "name": "REACH Project",
+    "live": "https://col-reach.netlify.app/",
+    "gitlab": "https://gitlab.com/istanbulclientprojectsApr2020/columbia-university-reach"
+  },{
     "name": "movieXplorer",
     "live": "https://adlogi.github.io/movieXplorer/",
     "github": "https://github.com/adlogi/movieXplorer"
