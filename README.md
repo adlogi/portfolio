@@ -2,7 +2,7 @@
 
 This project is my portfolio website as a front-end developer.
 
-Live link: [https://adlogi.github.io/](https://adlogi.github.io/)
+~~Live link: [https://adlogi.github.io/](https://adlogi.github.io/)~~
 
 Demo video: [https://youtu.be/LOyYI3KK6cs](https://youtu.be/LOyYI3KK6cs)
 
